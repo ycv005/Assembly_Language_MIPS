@@ -13,7 +13,7 @@ main:
     syscall  #program is terminated
 
 
-#------------------------Code Explaination--------------------------#
+#------------------------Code Explanation--------------------------#
 
 # to comment in assembly language (MIPS), # is used
 #.data is the section where all the variables are declared or initalized
