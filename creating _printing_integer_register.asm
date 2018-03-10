@@ -34,3 +34,5 @@ main:
 #--------code explanation---------# 
 #$a0 is used to store integers, characters, and string "output"
 #first printing the message then printing the integer
+#to store a integer, we need 4 byte and .word is of 4 byte
+#to store a character, we need 1 byte and .byte is the same.
