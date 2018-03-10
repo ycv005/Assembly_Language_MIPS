@@ -10,4 +10,4 @@ main:
     syscall
 
 #-------code explanation---------#
-#.byte is the data type which format the given input into a character.
+#.byte(8 bits) is the data type which can be used to store character and integer(non fractional numbers)
