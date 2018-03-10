@@ -15,3 +15,22 @@ main:
 #--------code explanation---------# 
 #$a0 is used to store integers, characters, and string "output"
 #We were using la instruction command in printing string because we are storing the data in variable and then loading into the register
+
+
+
+#Another method for printing integer
+#   .data
+#        msg: .word 23
+#    .text
+#    main:
+#        li $v0, 1   #system call code for printing integer, it also tell the system to be ready for the printing int
+#        lw $a0, msg
+#        syscall
+#
+#        li $v0, 10
+#        syscall 
+
+
+#--------code explanation---------# 
+#$a0 is used to store integers, characters, and string "output"
+#first printing the message then printing the integer
