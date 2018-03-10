@@ -15,7 +15,7 @@ main:
 
 #------------------------Code Explaination--------------------------#
 
-# to comment in assembly language, # is used
+# to comment in assembly language (MIPS), # is used
 #.data is the section where all the variables are declared or initalized
 
 #message is variable which store my string
