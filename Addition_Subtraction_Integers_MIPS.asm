@@ -7,7 +7,7 @@ main:
     lw $t1, t2
 
     li $v0, 1
-    add $a0, $t0, $t1
+    add $a0, $t0, $t1    #use- sub $a0, $t0, $t1 #for subtraction
     syscall
 
     li $v0, 10
