@@ -14,9 +14,9 @@
     syscall
 
     addnum:             #addnum is our calle function
-        add $sp, $sp, -8
-        sw $s0, 0($sp)
-        sw $ra, 4($sp)
+        add $sp, $sp, -8        #-8? because we need to store the value of the $ra and $s0 in the stack such that each of them will take only 4 byte
+        sw $s0, 0($sp)          #storing the value of the $s0 reg. in the starting of the stack
+        sw $ra, 4($sp)          #stroing the value of the $ra reg. at the top of the stack.
 
         add $s0, $s0, 10
 
@@ -24,7 +24,7 @@
         move $a0, $s0
         syscall
 
-        jal addnewline
+        jal addnewline          #calling function inside a function modified the value of $ra. To avoid this, we store the value of $ra in stack before this step.
 
         lw $s0, 0($sp)
         lw $ra, 4($sp)
@@ -40,8 +40,5 @@
         jr $ra
 
 #-----------code explanation------------#
-#Here, save register will be overwrite in the calle funciton so to prevent this, we are saving the value of the $s0 in the stack using stack pointer($sp)
-#In MIPS, the stack grows in the downward mannner. so to make a memory available for use, we add -4 to the stack pointer register(pointing at the top of the stack).
-#Since, we are storing a value from a register to the the memory, so will be using sw(store word instruction) to store the value of the $s0 in the stack.
-#After performing an action and if the work of the overwrite register($s0) is finish then restore the value from the memory(stack) to the register using load word instruction.
-#It is important to free up the space in the stack which was allocated for any purpose. Thus, adding 4 to the stack pointer to prevent the memory waste.
+#Here, we are calling function wihtin a function so, so the address stores in $ra will be modified and thus we caught in a infinity loop.
+#So that's why we are storing the value of $ra and $s0, in the stack so that we can retreive those data again.
