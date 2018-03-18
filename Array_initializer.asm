@@ -1,5 +1,5 @@
 .data
-	array: .word 10:3	#telling assembler to make a array of size 3 and each element initialized with 12. word=4 bytes. Thus, each element is of 4 bytes. 
+	array: .word 10:3	#telling assembler to make a array of size 3 and each element initialized with 10. word=4 bytes. Thus, each element is of 4 bytes. 
     line: .asciiz "\n"
 .text
 main:	
