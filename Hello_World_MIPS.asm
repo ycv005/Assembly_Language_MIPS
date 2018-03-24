@@ -1,4 +1,3 @@
-```jsx
 .data
     message: .asciiz "Hello, World. This is the 1st program in Assembly language\n"
 
