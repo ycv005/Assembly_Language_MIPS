@@ -41,4 +41,5 @@ main:
             lw $ra, 0($sp)
             lw $s0, 4($sp)
             add $sp, $sp, 8
-            jr $ra              #it will jump to the instruction next to the jal findfact that is mul and then factdone wil again come in role.
+            jr $ra              #when a0 equal to 0, it jump to the parent call 1st time jal fact else(a0 not equal to 0), it will jump 
+                                #to the instruction next to the jal findfact that is mul and then factdone wil again come in role.
