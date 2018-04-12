@@ -19,7 +19,7 @@
     syscall
 
     li $v0, 4
-    move $a0, $t0   #we are not using here la instruction bcoz we are not loading the memory.
+    move $a0, $t0   #we are not using here la instruction bcoz we are not loading memory from the memory.
     syscall
 
     li $v0, 10
