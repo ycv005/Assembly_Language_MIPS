@@ -33,7 +33,6 @@ sum:
 
 	#base case when, n=1
 	li $v0, 0
-	beq $a1, 1, sumdone
 	beq $a1, 0, sumdone
 	sub $a1, $a1, 2
 
