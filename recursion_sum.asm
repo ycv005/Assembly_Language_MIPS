@@ -35,7 +35,7 @@ sum:
 
 	jal sum
 
-	sum $v0, $v0, $s0
+	add $v0, $v0, $s0
 
 sumdone:
 	lw $s0, 0($sp)
